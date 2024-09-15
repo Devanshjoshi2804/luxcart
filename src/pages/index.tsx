@@ -21,7 +21,6 @@ export default function Home() {
     triggerOnce: true,
   });
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { cart } = useCart();
 
   const openCart = () => {
     setIsCartOpen(true);
