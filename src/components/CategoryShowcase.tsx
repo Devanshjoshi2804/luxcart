@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const categories = [
   { name: "Casual", image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=300&fit=crop" },
@@ -29,22 +30,23 @@ const CategoryShowcase = () => {
             >
               <Link href={`/category/${category.name.toLowerCase()}`} legacyBehavior>
                 <a className="block relative overflow-hidden rounded-lg shadow-lg group">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  <Image 
+                    src={category.image} 
+                    alt={category.name} 
+                    layout="fill" 
+                    objectFit="cover"
                   />
-                     <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-     <h3 className="text-2xl font-bold text-white">{category.name}</h3>
-   </div>
- </a>
-</Link>
-          </motion.div>
-        ))}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
+                  </div>
+                </a>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 export default CategoryShowcase;
