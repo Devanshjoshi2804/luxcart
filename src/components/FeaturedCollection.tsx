@@ -29,7 +29,6 @@ const featuredProducts: Product[] = [
 
 
 const FeaturedCollection: React.FC<FeaturedCollectionProps> = ({ openCart }) => {
-  const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { addToCart } = useContext(CartContext);
   const [showNotification, setShowNotification] = useState(false);
