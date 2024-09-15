@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
 import { FiShoppingCart, FiUser, FiMenu, FiX, FiSearch } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 
@@ -13,7 +12,6 @@ const Header: React.FC<HeaderProps> = ({ openCart }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const router = useRouter();
   const { cart } = useCart();
 
   useEffect(() => {
