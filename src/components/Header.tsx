@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ openCart }) => {
                 key={item.name}
                 href={item.path}
                 className={`text-sm uppercase tracking-wider font-medium ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
+                  isScrolled ? &quot;text-gray-800&quot; : &quot;text-white&quot;
                 } hover:text-teal-500 transition-colors duration-300 relative group`}
               >
                 {item.name}
