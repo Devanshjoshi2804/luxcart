@@ -10,6 +10,7 @@ import TestimonialSlider from '../components/TestimonialSlider';
 import Newsletter from '../components/Newsletter';
 import { useInView } from 'react-intersection-observer';
 import Cart from '../components/Cart';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useCart } from '../context/CartContext';
 import Header from '../components/Header'; // Import the Header component
 
