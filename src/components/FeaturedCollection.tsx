@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import { FiShoppingCart, FiHeart, FiEye } from 'react-icons/fi';
 import { Product } from '../types';
@@ -93,8 +93,6 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = ({ openCart }) => 
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 50 }}
                 whileHover={{ y: -5 }}
-                onHoverStart={() => setHoveredProduct(product.id)}
-                onHoverEnd={() => setHoveredProduct(null)}
               >
                 <div className="relative pt-[100%] overflow-hidden group">
                   <Image
